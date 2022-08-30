@@ -28,10 +28,10 @@ Configuration
 
 You can add the following system parameters to configure the usage of SendGrid:
 
-* ``mail_sendgrid.substitution_prefix`` Any symbol or character used as a 
+* ``mail_sendgrid.substitution_prefix`` Any symbol or character used as a
   prefix for `SendGrid Substitution Tags <https://sendgrid.com/docs/API_Reference/SMTP_API/substitution_tags.html>`_.
   ``{`` is used by default.
-* ``mail_sendgrid.substitution_suffix`` Any symbol or character used as a 
+* ``mail_sendgrid.substitution_suffix`` Any symbol or character used as a
   suffix for SendGrid Substitution Tags.
   ``}`` is used by default.
 * ``mail_sendgrid.send_method`` Use value 'sendgrid' to override the traditional SMTP server used to send e-mails with sendgrid.
@@ -73,10 +73,6 @@ The preview wizard now renders your e-mail with the SendGrid template applied.
 
 From e-mails, use the "Send (SendGrid)" button to send the e-mail using Sendgrid.
 
-.. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
-   :alt: Try me on Runbot
-   :target: https://runbot.odoo-community.org/runbot/205/10.0
-
 Known issues / Roadmap
 ======================
 
@@ -84,11 +80,11 @@ Known issues / Roadmap
 
 Bug Tracker
 ===========
-
 Bugs are tracked on `GitHub Issues
-<https://github.com/OCA/social/issues>`_. In case of trouble, please
+<https://github.com/open-synergy/opnsynid-social/issues>`_. In case of trouble, please
 check there if your issue has already been reported. If you spotted it first,
-help us smashing it by providing a detailed and welcomed feedback.
+help us smash it by providing detailed and welcomed feedback.
+
 
 Credits
 =======
@@ -104,18 +100,13 @@ Contributors
 * Emanuel Cino <ecino@compassion.ch>
 * Roman Zoller <rzcomp@gmail.com>
 * Isaac Gallart <igallart@puntsistemes.es>
+* Michael Viriyananda <viriyananda.michael@simetri-sinergi.id>
 
 Maintainer
 ----------
 
-.. image:: https://odoo-community.org/logo.png
-   :alt: Odoo Community Association
-   :target: https://odoo-community.org
+.. image:: https://simetri-sinergi.id/logo.png
+   :alt: PT. Simetri Sinergi Indonesia
+   :target: https://simetri-sinergi.id
 
-This module is maintained by the OCA.
-
-OCA, or the Odoo Community Association, is a nonprofit organization whose
-mission is to support the collaborative development of Odoo features and
-promote its widespread use.
-
-To contribute to this module, please visit http://odoo-community.org.
+This module is maintained by the PT. Simetri Sinergi Indonesia.
