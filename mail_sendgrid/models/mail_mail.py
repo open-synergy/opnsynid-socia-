@@ -115,7 +115,7 @@ class MailMail(models.Model):
             )
             return
 
-        sg = SendGridAPIClient(apikey=api_key)
+        sg = SendGridAPIClient(api_key=api_key)
         for email in outgoing:
             try:
                 response = sg.client.mail.send.post(
@@ -124,7 +124,6 @@ class MailMail(models.Model):
             except Exception as e:
                 _logger.error(str(e))
                 continue
-
             status = response.status_code
             msg = response.body
 
@@ -177,7 +176,7 @@ class MailMail(models.Model):
 
         # We use only one personalization for transactional e-mail
         personalization = Personalization()
-        subject = self.subject and self.subject.encode("utf_8") or "(No subject)"
+        subject = self.subject or "(No subject)"
         personalization.subject = subject
         addresses = set()
         if not test_address:
@@ -209,8 +208,8 @@ class MailMail(models.Model):
         for attachment in self.attachment_ids:
             s_attachment = Attachment()
             # Datas are not encoded properly for sendgrid
-            s_attachment.content = base64.b64encode(base64.b64decode(attachment.datas))
-            s_attachment.filename = attachment.name
+            s_attachment.file_content = base64.b64encode(attachment.datas).decode()
+            s_attachment.file_name = attachment.name
             s_mail.add_attachment(s_attachment)
 
         return s_mail
