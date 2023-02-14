@@ -2,7 +2,6 @@
 # Copyright 2022 OpenSynergy Indonesia
 # Copyright 2022 PT. Simetri Sinergi Indonesia
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
-import base64
 import logging
 import re
 import time
@@ -20,7 +19,11 @@ try:
         Attachment,
         Content,
         CustomArg,
+        Disposition,
         Email,
+        FileContent,
+        FileName,
+        FileType,
         Header,
         Mail,
         Personalization,
@@ -206,10 +209,12 @@ class MailMail(models.Model):
         s_mail.add_personalization(personalization)
 
         for attachment in self.attachment_ids:
-            s_attachment = Attachment()
-            # Datas are not encoded properly for sendgrid
-            s_attachment.file_content = base64.b64encode(attachment.datas).decode()
-            s_attachment.file_name = attachment.name
+            s_attachment = Attachment(
+                FileContent(attachment.datas.decode("utf-8")),
+                FileName(attachment.name),
+                FileType(attachment.mimetype),
+                Disposition("attachment"),
+            )
             s_mail.add_attachment(s_attachment)
 
         return s_mail

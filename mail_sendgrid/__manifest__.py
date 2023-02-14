@@ -4,7 +4,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 {
     "name": "SendGrid",
-    "version": "11.0.1.0.1",
+    "version": "11.0.1.0.2",
     "category": "Social Network",
     "author": "Compassion CH, Odoo Community Association (OCA),"
     "OpenSynergy Indonesia, PT. Simetri Sinergi Indonesia",
