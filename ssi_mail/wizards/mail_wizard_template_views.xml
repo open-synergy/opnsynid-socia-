@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2023 OpenSynergy Indonesia
+     Copyright 2023 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+<record id="mail_wizard_invite_form" model="ir.ui.view">
+    <field name="name">mail_wizard_invite - Contact Group</field>
+    <field name="model">mail.wizard.invite</field>
+    <field name="mode">extension</field>
+    <field name="inherit_id" ref="mail.mail_wizard_invite_form" />
+    <field name="arch" type="xml">
+        <data>
+            <xpath expr="//field[@name='res_id']" position="after">
+                <field name="contact_group_ids" widget="many2many_tags" />
+            </xpath>
+        </data>
+    </field>
+</record>
+</odoo>
