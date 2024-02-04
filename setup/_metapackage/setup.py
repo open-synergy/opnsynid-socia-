@@ -8,6 +8,7 @@ setuptools.setup(
     description="Meta package for open-synergy-opnsynid-social Odoo addons",
     version=version,
     install_requires=[
+        'odoo14-addon-ssi_mail',
         'odoo14-addon-ssi_mail_optional_related_attachment',
     ],
     classifiers=[
