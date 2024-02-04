@@ -18,7 +18,7 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
-[ssi_mail](ssi_mail/) | 14.0.1.0.0 |  | Mail App
+[ssi_mail](ssi_mail/) | 14.0.1.1.0 |  | Mail App
 [ssi_mail_optional_related_attachment](ssi_mail_optional_related_attachment/) | 14.0.1.0.1 |  | Optionaly Attach Related Attachment
 
 [//]: # (end addons)
